@@ -1,0 +1,9 @@
+{
+  "dataset": "fraud_guard",
+  "n_samples": 10000,
+  "use_smote": true,
+  "use_adasyn": false,
+  "train_haste": true,
+  "device": "cpu",
+  "timestamp": "2026-02-07 23:40:28"
+}
