@@ -1,0 +1,104 @@
+================================================================================
+COMPREHENSIVE FRAUD DETECTION REPORT
+Dataset: banksim
+Timestamp: 20260207_233908
+Total samples: 2000
+Fraud rate: 11.0000%
+================================================================================
+
+MODEL PERFORMANCE SUMMARY:
+--------------------------------------------------------------------------------
+Model           | F1              | AUC             | Precision       | Recall          | Accuracy        | MCC             | Cost           
+--------------------------------------------------------------------------------
+Random Forest   | 0.9128          | 0.9872          | 0.9213          | 0.9045          | 0.9810          | 0.9022          | 227            
+SVM             | 0.9051          | 0.9849          | 0.8798          | 0.9318          | 0.9785          | 0.8934          | 178            
+Logistic Regres | 0.1638          | 0.4720          | 0.1011          | 0.4318          | 0.5150          | -0.0269         | 2095           
+HASTE           | 0.9306          | 0.9848          | 0.9481          | 0.9136          | 0.9850          | 0.9223          | 201            
+--------------------------------------------------------------------------------
+
+BEST MODELS BY METRIC:
+--------------------------------------------------------------------------------
+F1          : HASTE (0.9306)
+ROC_AUC     : Random Forest (0.9872)
+PRECISION   : HASTE (0.9481)
+RECALL      : SVM (0.9318)
+ACCURACY    : HASTE (0.9850)
+MCC         : HASTE (0.9223)
+
+================================================================================
+STATISTICAL SIGNIFICANCE TESTING
+--------------------------------------------------------------------------------
+
+Random Forest vs SVM:
+  Disagreements: 33
+  Random Forest better: 19
+  SVM better: 14
+  p-value: 0.4869
+  Significant difference: NO
+
+Random Forest vs Logistic Regression:
+  Disagreements: 970
+  Random Forest better: 951
+  Logistic Regression better: 19
+  p-value: 0.0000
+  Significant difference: YES
+
+Random Forest vs HASTE:
+  Disagreements: 12
+  Random Forest better: 2
+  HASTE better: 10
+  p-value: 0.0386
+  Significant difference: YES
+
+SVM vs Logistic Regression:
+  Disagreements: 969
+  SVM better: 948
+  Logistic Regression better: 21
+  p-value: 0.0000
+  Significant difference: YES
+
+SVM vs HASTE:
+  Disagreements: 23
+  SVM better: 5
+  HASTE better: 18
+  p-value: 0.0106
+  Significant difference: YES
+
+Logistic Regression vs HASTE:
+  Disagreements: 970
+  Logistic Regression better: 15
+  HASTE better: 955
+  p-value: 0.0000
+  Significant difference: YES
+
+================================================================================
+BUSINESS IMPACT ANALYSIS
+--------------------------------------------------------------------------------
+
+Random Forest:
+  Frauds caught: 199 ($199,000 prevented)
+  False alarms: 17 ($850 cost)
+  Frauds missed: 21 ($21,000 lost)
+  Net benefit: $177,150
+  ROI: 233.1x
+
+SVM:
+  Frauds caught: 205 ($205,000 prevented)
+  False alarms: 28 ($1,400 cost)
+  Frauds missed: 15 ($15,000 lost)
+  Net benefit: $188,600
+  ROI: 145.4x
+
+Logistic Regression:
+  Frauds caught: 95 ($95,000 prevented)
+  False alarms: 845 ($42,250 cost)
+  Frauds missed: 125 ($125,000 lost)
+  Net benefit: $-72,250
+  ROI: 1.2x
+
+HASTE:
+  Frauds caught: 201 ($201,000 prevented)
+  False alarms: 11 ($550 cost)
+  Frauds missed: 19 ($19,000 lost)
+  Net benefit: $181,450
+  ROI: 364.5x
