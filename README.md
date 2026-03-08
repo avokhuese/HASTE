@@ -41,20 +41,20 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 
 # Project Structure
 fraud_detection_haste/
-├── main.py                    # Main execution script
-├── run_full_pipeline.py       # Complete pipeline runner
-├── config.py                   # Configuration settings
-├── requirements.txt            # Dependencies
-├── models/
-│   └── haste.py                # HASTE model implementation
-├── evaluation/
-│   └── comprehensive_evaluator.py  # Evaluation and visualization
-├── utils/
-│   └── drift_detection.py      # Concept drift utilities
-├── data/                        # Dataset storage
-├── plots/                        # Generated visualizations
-├── results/                      # Evaluation results
-└── models/                        # Saved model checkpoints
+- ├── main.py                    # Main execution script
+- ├── run_full_pipeline.py       # Complete pipeline runner
+- ├── config.py                   # Configuration settings
+- ├── requirements.txt            # Dependencies
+- ├── models/
+- │   └── haste.py                # HASTE model implementation
+- ├── evaluation/
+- │   └── comprehensive_evaluator.py  # Evaluation and visualization
+- ├── utils/
+- │   └── drift_detection.py      # Concept drift utilities
+- ├── data/                        # Dataset storage
+- ├── plots/                        # Generated visualizations
+- ├── results/                      # Evaluation results
+- └── models/                        # Saved model checkpoints
 
 # Run Complete Pipeline
 python run_full_pipeline.py --dataset banksim --n_samples 10000
